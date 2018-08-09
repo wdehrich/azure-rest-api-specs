@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "2018-04-20",
+    "version": "7893-32-23",
     "title": "Application Insights Data Plane",
     "description": "This API exposes AI metric & event information and associated metadata",
     "termsOfService": "https://dev.applicationinsights.io/tos",

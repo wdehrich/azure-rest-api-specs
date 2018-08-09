@@ -5,7 +5,7 @@
     "subscriptionId": "c512b59c-4005-40e2-b13d-ac29cfb46af4",
     "resourceGroupName": "test-rg",
     "applicationName": "azure-insights",
-    "apiVersion": "2018-04-20"
+    "apiVersion": "7893-32-23"
   },
   "responses": {
     "200": {
