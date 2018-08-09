@@ -1,13 +1,13 @@
 # ApplicationInsights
-    
+
 > see https://aka.ms/autorest
 
 This is the AutoRest configuration file for ApplicationInsightsDataPlane.
 
-
-
 ---
-## Getting Started 
+
+## Getting Started
+
 To build the SDK for ApplicationInsightsDataPlane, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,11 +15,12 @@ To build the SDK for ApplicationInsightsDataPlane, simply [Install AutoRest](htt
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-### Basic Information 
+### Basic Information
 
 These are the global settings for the ApplicationInsights API.
 
@@ -28,9 +29,18 @@ title: ApplicationInsightsDataClient
 description: Composite Swagger for Application Insights Data Client
 add-credentials: true
 openapi-type: data-plane
-tag: v1
+tag: package-7893-32
 ```
 
+
+### Tag: package-7893-32
+
+These settings apply only when `--tag=package-7893-32` is specified on the command line.
+
+```yaml $(tag) == 'package-7893-32'
+input-file:
+  - microsoft.insights/stable/7893-32-23/swagger.json
+```
 ### Tag: v1
 
 These settings apply only when `--tag=v1` is specified on the command line.
@@ -63,7 +73,7 @@ swagger-to-sdk:
   - repo: azure-sdk-for-python
 ```
 
-## C# 
+## C#
 
 These settings apply only when `--csharp` is specified on the command line.
 Please also specify `--csharp-sdks-folder=<path to "SDKs" directory of your azure-sdk-for-net clone>`.
@@ -94,17 +104,18 @@ directive:
     where: $.definitions.table.properties.rows.items.items.type
     transform: $ = "object"
 ```
+
 ``` yaml $(python) && $(python-mode) == 'update'
 python:
   no-namespace-folders: true
   output-folder: $(python-sdks-folder)/azure-applicationinsights/azure/applicationinsights
 ```
+
 ``` yaml $(python) && $(python-mode) == 'create'
 python:
   basic-setup-py: true
   output-folder: $(python-sdks-folder)/azure-applicationinsights
 ```
-
 
 ## Go
 
